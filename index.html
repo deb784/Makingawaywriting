@@ -1353,13 +1353,14 @@ footer {
   <section class="section contact-section">
     <div class="container">
       <div class="contact-grid">
+
         <div class="contact-booking fade-up">
           <div class="contact-booking-icon">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <h3>Book a Discovery Call</h3>
-          <p>Schedule a free 30-minute call to discuss your book idea and see if we're a good fit. No sales pitch — just an honest conversation about your project.</p>
-          <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Schedule Your Call →</a>
+          <p>Schedule a free 30-minute call to discuss your book idea and see if we're a good fit. No sales pitch, just an honest conversation about your project.</p>
+          <a href="https://calendly.com/rachel-arterberry/discovery-call" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Schedule Your Call →</a>
           <div class="calendly-placeholder">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(201,162,39,0.4)" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <p style="margin-top:8px">Calendly booking widget<br>connects here</p>
@@ -1368,44 +1369,57 @@ footer {
 
         <div class="contact-form-wrap fade-up fade-up-delay-1">
           <h3>Or Send Me a Message</h3>
-          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="thank-you.html"
+            class="contact-form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
+
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First name</label>
-                <input type="text" id="fname" placeholder="Your first name" required>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required>
               </div>
               <div class="form-group">
                 <label for="lname">Last name</label>
-                <input type="text" id="lname" placeholder="Your last name" required>
+                <input type="text" id="lname" name="lname" placeholder="Your last name" required>
               </div>
             </div>
+
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" id="email" placeholder="you@company.com" required>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
             </div>
+
             <div class="form-group">
               <label for="project">Project type</label>
-              <select id="project">
+              <select id="project" name="project">
                 <option value="">Select project type...</option>
                 <option>Executive ghostwriting (full book)</option>
                 <option>Memoir or personal narrative</option>
                 <option>Developmental editing</option>
                 <option>Author platform strategy</option>
-                <option>Not sure yet — let's talk</option>
+                <option>Not sure yet, let's talk</option>
               </select>
             </div>
+
             <div class="form-group">
               <label for="message">What's your book about?</label>
-              <textarea id="message" placeholder="Tell me a little about your idea, who it's for, and where you are in the process..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell me a little about your idea, who it's for, and where you are in the process..."></textarea>
             </div>
+
             <button type="submit" class="form-submit">Send Message →</button>
           </form>
-          <div id="form-success" style="display:none;text-align:center;padding:32px;background:rgba(29,158,117,0.06);border-radius:8px;border:1px solid rgba(29,158,117,0.2)">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" style="margin-bottom:12px"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <h3 style="color:var(--navy);margin-bottom:8px">Message sent!</h3>
-            <p style="font-size:0.92rem">Thanks for reaching out. I'll be in touch within 24–48 hours.</p>
-          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -1419,11 +1433,11 @@ footer {
       <div class="faq-grid">
         <div class="faq-item fade-up">
           <div class="faq-q">How long does it take to write a book?</div>
-          <div class="faq-a">Most ghostwriting projects take 6–12 months depending on scope and complexity. Some shorter books or faster-paced projects can be completed in 3–4 months. We'll map out a realistic timeline in your custom proposal.</div>
+          <div class="faq-a">Most ghostwriting projects take 6 to 12 months depending on scope and complexity. Some shorter books or faster-paced projects can be completed in 3 to 4 months. We'll map out a realistic timeline in your custom proposal.</div>
         </div>
         <div class="faq-item fade-up fade-up-delay-1">
           <div class="faq-q">How much does ghostwriting cost?</div>
-          <div class="faq-a">Investment varies based on book length, research required, and timeline. Every project gets a custom proposal after our discovery call — there are no one-size-fits-all packages here.</div>
+          <div class="faq-a">Investment varies based on book length, research required, and timeline. Every project gets a custom proposal after our discovery call. There are no one-size-fits-all packages here.</div>
         </div>
         <div class="faq-item fade-up fade-up-delay-2">
           <div class="faq-q">Will the book sound like me?</div>
@@ -1431,7 +1445,7 @@ footer {
         </div>
         <div class="faq-item fade-up fade-up-delay-3">
           <div class="faq-q">Is ghostwriting ethical?</div>
-          <div class="faq-a">Yes — and it's more common than most people realize. Many bestselling business books, memoirs, and leadership titles are written with a ghostwriter. The ideas, expertise, and story are entirely yours. I'm here to help you say it well.</div>
+          <div class="faq-a">Yes, and it's more common than most people realize. Many bestselling business books, memoirs, and leadership titles are written with a ghostwriter. The ideas, expertise, and story are entirely yours. I'm here to help you say it well.</div>
         </div>
         <div class="faq-item fade-up">
           <div class="faq-q">Will anyone know you wrote my book?</div>
@@ -1439,13 +1453,13 @@ footer {
         </div>
         <div class="faq-item fade-up fade-up-delay-1">
           <div class="faq-q">What if I already have a draft?</div>
-          <div class="faq-a">Developmental editing might be the better fit. I can work with whatever you have — a rough draft, an outline, or just a collection of ideas — and help you shape it into a finished, publishable manuscript.</div>
+          <div class="faq-a">Developmental editing might be the better fit. I can work with whatever you have, a rough draft, an outline, or just a collection of ideas, and help you shape it into a finished, publishable manuscript.</div>
         </div>
       </div>
     </div>
   </section>
 
-</div><!-- /contact -->
+</div><!-- /page-contact -->
 
 <!-- FOOTER -->
 <footer>
