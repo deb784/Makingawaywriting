@@ -1,69 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thank You | Making A Way Writing Services</title>
-  <meta name="description" content="Thank You for Making A Way Writing Services.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/icon-navy-square.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Making A Way Writing Services</title>
+<meta name="description" content="Thank you for reaching out to Making A Way Writing Services. Rachel Arterberry will follow up shortly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B2A4A;
+  --navy-dark: #111c31;
+  --navy-mid: #243459;
+  --gold: #C9A227;
+  --gold-light: #E8C55A;
+  --cream: #F4EFE2;
+  --white: #FFFFFF;
+  --text: #1a1a2e;
+  --text-muted: #5a6480;
+  --text-light: #8A9BBF;
+  --border: rgba(201,162,39,0.2);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --shadow-md: 0 8px 32px rgba(27,42,74,0.12);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--white); }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav { background: var(--navy-dark); padding: 0; border-bottom: 1px solid rgba(201,162,39,0.15); }
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; max-width: 1160px; margin: 0 auto; height: 72px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo img { width: 44px; height: 44px; object-fit: contain; background: transparent; display: block; }
+.nav-logo-main {
+  font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+  color: var(--gold); line-height: 1.1; letter-spacing: 0.02em;
+}
+.nav-logo-sub {
+  font-size: 0.55rem; color: rgba(255,255,255,0.6);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  font-size: 0.92rem; font-weight: 500; transition: color var(--transition);
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.thanks-hero {
+  background: var(--navy);
+  padding: 120px 0 100px;
+}
+.thanks-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); background: rgba(201,162,39,0.12);
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.thanks-hero h1 { margin-bottom: 18px; max-width: 820px; }
+.thanks-hero p.lead {
+  color: var(--text-light);
+  font-size: 1.1rem; max-width: 620px; margin-bottom: 32px;
+  line-height: 1.7;
+}
+.thanks-hero p.detail {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.98rem; max-width: 620px; margin-bottom: 36px;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 26px; font-size: 0.98rem; font-weight: 600;
+  border-radius: 4px; text-decoration: none;
+  transition: var(--transition); font-family: var(--font-body);
+  cursor: pointer; border: 1.5px solid transparent;
+}
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.35); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* NEXT STEPS CARD */
+.next-steps {
+  background: var(--cream);
+  padding: 80px 0;
+}
+.next-steps h2 {
+  color: var(--navy); text-align: center; margin-bottom: 8px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+.next-steps .sub {
+  text-align: center; color: var(--text-muted);
+  max-width: 620px; margin: 0 auto 44px;
+}
+.next-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  max-width: 980px; margin: 0 auto;
+}
+.next-card {
+  background: var(--white); border-radius: 8px; padding: 28px 24px;
+  border: 1px solid var(--border);
+}
+.next-card .num {
+  font-family: var(--font-display); font-size: 1.6rem;
+  color: var(--gold); font-weight: 700; margin-bottom: 8px;
+}
+.next-card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
+.next-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; }
+
+/* FOOTER */
+footer { background: var(--navy-dark); padding: 60px 0 30px; color: rgba(255,255,255,0.7); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; text-decoration: none; }
+.footer-brand img { width: 42px; height: 42px; object-fit: contain; background: transparent; display: block; }
+.footer-brand-main { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gold); line-height: 1.1; }
+.footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.footer-desc { color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
+footer h4 { color: var(--gold); font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; display: block; font-size: 0.9rem; padding: 4px 0; transition: color var(--transition); }
+footer a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 22px; display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .next-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .thanks-hero { padding: 90px 0 70px; }
+}
+</style>
 </head>
-<body id="top">
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <img src="images/logo-white-square.png" alt="Making A Way Writing Services logo">
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="images/icon-white-square.png" alt="Making A Way Writing Services logo">
       <div>
-        <div class="brand-title">Making A Way</div>
-        <div class="brand-sub">Writing Services</div>
+        <div class="nav-logo-main">Making a Way</div>
+        <div class="nav-logo-sub">Writing Services</div>
       </div>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#top">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="writing.html">Writing</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#page-about">About</a></li>
+      <li><a href="index.html#page-services">Services</a></li>
+      <li><a href="index.html#page-writing">Writing</a></li>
+      <li><a href="index.html#page-contact">Contact</a></li>
+    </ul>
   </div>
-</header>
-<main>
-  <section class="section hero">
-    <div class="container">
-      <div class="eyebrow">Message received</div>
-      <h1>Thank you for reaching out</h1>
-      <p class="lead">Your message has been sent to Making A Way Writing Services. Rachel will follow up as soon as possible.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="index.html#top">Return home</a>
-        <a class="btn btn-secondary" href="index.html#contact">Back to contact</a>
+</nav>
+
+<section class="thanks-hero">
+  <div class="container">
+    <span class="thanks-eyebrow">Message received</span>
+    <h1>Thank you. Your story matters.</h1>
+    <p class="lead">Your message is in Rachel's inbox. She reads every note personally and will follow up within one to two business days.</p>
+    <p class="detail">In the meantime, take a look around. There is plenty here on the craft of ghostwriting, the publishing landscape, and what it takes to turn expertise into a book people actually read.</p>
+    <div class="hero-actions">
+      <a href="index.html" class="btn btn-gold">Return to home</a>
+      <a href="index.html#page-writing" class="btn btn-outline">Read the blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="next-steps">
+  <div class="container">
+    <h2>What happens next</h2>
+    <p class="sub">A quick preview of how Rachel handles every new inquiry.</p>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="num">01</div>
+        <h3>Rachel reviews your note</h3>
+        <p>She reads your message carefully and considers the book you described, the timeline, and the fit.</p>
+      </div>
+      <div class="next-card">
+        <div class="num">02</div>
+        <h3>A personal reply</h3>
+        <p>You receive a direct response from Rachel within one to two business days. No auto-responders, no sales scripts.</p>
+      </div>
+      <div class="next-card">
+        <div class="num">03</div>
+        <h3>Discovery call, if a fit</h3>
+        <p>If the project looks like a match, you schedule a free 30-minute call to talk through the book you want to write.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html">
-          <img src="images/logo-white-square.png" alt="Making A Way Writing Services logo">
+        <a class="footer-brand" href="index.html">
+          <img src="images/icon-white-square.png" alt="Making A Way Writing Services logo">
           <div>
-            <div class="brand-title">Making A Way</div>
-            <div class="brand-sub">Writing Services</div>
+            <div class="footer-brand-main">Making A Way</div>
+            <div class="footer-brand-sub">Writing Services</div>
           </div>
         </a>
-        <p>Strategic ghostwriting and developmental editing for executives, thought leaders, and experts who are ready to turn lived experience into a book with traction.</p>
+        <p class="footer-desc">Strategic ghostwriting and developmental editing for executives, thought leaders, and experts who are ready to turn lived experience into a book with traction.</p>
       </div>
       <div>
         <h4>Explore</h4>
-        <p><a href="index.html#services">Services</a></p>
-        <p><a href="writing.html">Writing</a></p>
-        <p><a href="index.html#contact">Book a discovery call</a></p>
+        <a href="index.html#page-services">Services</a>
+        <a href="index.html#page-writing">Writing</a>
+        <a href="index.html#page-contact">Book a discovery call</a>
       </div>
       <div>
         <h4>Legal</h4>
-        <p><a href="privacy.html">Privacy Policy</a></p>
-        <p><a href="terms.html">Terms of Service</a></p>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -72,6 +240,6 @@
     </div>
   </div>
 </footer>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+
 </body>
 </html>
