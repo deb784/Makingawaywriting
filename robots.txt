@@ -1,13 +1,39 @@
 # robots.txt for Making A Way Writing Services
 # https://makingawaywriting.com
+# Last updated: August 2026
 
 # Allow all search engines and AI assistants to crawl the site
 User-agent: *
 Allow: /
 
-# Keep utility pages out of search results
+# Keep utility and confirmation pages out of search results
 Disallow: /guide-thanks.html
 Disallow: /thank-you.html
+
+# Explicitly welcome major AI assistants for discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 # Sitemap location
 Sitemap: https://makingawaywriting.com/sitemap.xml
