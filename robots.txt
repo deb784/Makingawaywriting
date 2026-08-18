@@ -1,0 +1,38 @@
+# robots.txt for Making A Way Writing Services
+# https://makingawaywriting.com
+
+User-agent: *
+Allow: /
+
+# Block low-value or system paths
+Disallow: /guide-thanks.html
+Disallow: /thank-you.html
+Disallow: /downloads/
+
+# Block AI training crawlers (optional but recommended for a writing business)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Sitemap location
+Sitemap: https://makingawaywriting.com/sitemap.xml
